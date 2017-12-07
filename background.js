@@ -21,8 +21,8 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
 
 			var lastRefresh = data["Meta Data"]["3. Last Refreshed"];
 			
-			var latestData = data["Time Series (Daily)"][lastRefresh];
-			
+			var latestData = data["Time Series (Daily)"][lastRefresh.substring(0,10)];
+
 			var price = latestData["4. close"];
 
 			var volume = latestData["5. volume"];
