@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Quick Quote",
+  "description": "This extension allows the user to get stock quotes by highlighting tickers.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "stock.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["jquery-3.2.1.min.js", "background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ]
+}
