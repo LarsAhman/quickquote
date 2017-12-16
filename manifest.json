@@ -10,8 +10,16 @@
     "default_popup": "popup.html"
   },
 
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["mousepos.js"]
+    }
+  ],
+
   "background": {
-    "scripts": ["jquery-3.2.1.min.js", "background.js"],
+    "page": "background.html",
+    //"scripts": ["jquery-3.2.1.min.js", "background.js"],
     "persistent": false
   },
   "permissions": [

@@ -13,6 +13,19 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
 
 		chrome.storage.sync.set({'symbol':clickData.selectionText});
 
+		chrome.windows.create({
+    		url: chrome.runtime.getURL("dataPage.html"),
+    		type: "popup",
+    		focused: false,
+    		height: 400,
+    		width: 400,
+    		top: mouse.y,
+    		left: mouse.x
+    	}, function(win) {
+    		
+    	});
+
+
 		$('#symbolData').each(function (i, value) {
 			$(this).text("");
 		});
